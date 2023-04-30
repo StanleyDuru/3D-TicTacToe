@@ -267,7 +267,13 @@ public class GameController : MonoBehaviour
         }
 
         // No win found
-                        Debug.Log("no win");
+        if(round == 9){
+            playAgain.SetActive(true);
+            winnerText.enabled = true;
+            winnerText.text = "No Winner :(";
+            end = true;
+        }
+        Debug.Log("no win");
 
         //return false;
     }
